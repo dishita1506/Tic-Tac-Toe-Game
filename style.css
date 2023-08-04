@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: rgb(56, 41, 41);
+    color:whitesmoke
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+
+}
+
+.board div {
+    padding: 25px;
+    border: 3px solid whitesmoke;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+    width:80px;
+    cursor: pointer;
+    height: 80px;
+}
+
+.box:first-child,
+.box:nth-child(2),
+.box:nth-child(3) {
+    border-top: none;
+}
+
+.box:nth-child(3),
+.box:nth-child(6),
+.box:nth-child(9) {
+    border-right: none;
+}
+
+.box:nth-child(1),
+.box:nth-child(4),
+.box:nth-child(7) {
+    border-left: none;
+}
+
+.box:nth-child(7),
+.box:nth-child(8),
+.box:nth-child(9) {
+    border-bottom: none;
+}
+
+.players {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.p1,
+.p2 {
+    margin-inline: 30px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+#btn {
+    background-color: whitesmoke;
+    color: rgb(79, 31, 31);
+    font-size: 20px;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 9px;
+}
+
+#btn:hover {
+    background-color: rgb(169, 146, 115);
+    cursor: grabbing
+}
+
+
+.disable{
+    background-color: #786d63;
+}
+
+/* .teddy:hover{
+
+} */
+
+#teddyImage{
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+h4{
+    margin-bottom: 20px;
+    font-family: monospace;
+    font-size: 15px;
+    font-weight:bolder;
+    text-align: center
+   
+    
+}
+
+@keyframes move {
+    from {transform:translate(0deg);}
+  to {transform:translate(360deg);}
+}
+
+@media screen and (max-width:500px) {
+    h1 {
+       font-size: 40px; 
+    }
+    .p1,.p2{
+        font-size: 13px;
+    }
+    .board {
+        
+        grid-template-columns: repeat(3, 1fr);
+    
+    }
+    .board div {
+        padding: 15px;
+        border: 3px solid whitesmoke;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        text-align: center;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+    }
+    #btn{
+        font-size: 18px;
+         padding: 10px;
+         margin-top: 50px;
+    }
+
+}
